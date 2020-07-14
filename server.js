@@ -35,11 +35,9 @@ app.use(bodyParser.urlencoded({extended:true}));
 //used to store the static files (html,css,js) (public directory)
 app.use(express.static("public"));
 app.use(upload());
-// mongoose.connect("mongodb://localhost:27017/audioDB", {useNewUrlParser: true , useUnifiedTopology: true });
-mongoose.connect("mongodb+srv://sandeep_2020:Avsirphysics_2022123456@cluster0.xwnyq.mongodb.net/audioDB?retryWrites=true&w=majority", {useNewUrlParser: true , useUnifiedTopology: true });
+mongoose.connect("mongodb://localhost:27017/audioDB", {useNewUrlParser: true , useUnifiedTopology: true });
 
-// mongodb+srv://sandeep_2020:<password>@cluster0.xwnyq.mongodb.net/<dbname>?retryWrites=true&w=majority
-// mongo "mongodb+srv://cluster0.xwnyq.mongodb.net/<dbname>" --username sandeep_2020
+
 
 const userSchema = new mongoose.Schema ({
     name:String,
