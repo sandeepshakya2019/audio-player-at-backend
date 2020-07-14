@@ -1,0 +1,16 @@
+<%- include('header'); -%>
+<div class="container login">
+  <br>
+<form class="form-signin" action="/login" method="POST">
+      
+      <h1 class="h3 mb-3 font-weight-normal">Login to webdblog Audio Player</h1><br>
+      
+      <input type="email" id="inputEmailLogin" name ="emaillogin" class="form-control" placeholder="Email address" required><br>
+      <input type="password" id="inputPassLogin" name ="passlogin" class="form-control" placeholder="Password" required><br><br>
+      
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+      <p class="mt-5 mb-3 text-muted">Not Register ?<a href="/register"> Register</a></p>
+  </form>
+  <p id="errors"><%= success %></p>
+</div>
+<%- include('footer'); -%>
